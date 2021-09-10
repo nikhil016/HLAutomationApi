@@ -1,0 +1,647 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="HOTTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'HOTT.dbo.HoTT_Hotline_Report_Rawdata' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="HoTT_Hotline_Report_Rawdata">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Org" Type="nvarchar" MaxLength="255" />
+          <Property Name="Ord_Dt" Type="nvarchar" MaxLength="255" />
+          <Property Name="Req_Dt" Type="nvarchar" MaxLength="255" />
+          <Property Name="Promise_Date" Type="nvarchar" MaxLength="255" />
+          <Property Name="Order_Num" Type="nvarchar" MaxLength="255" />
+          <Property Name="Serv_Ord_Num" Type="nvarchar" MaxLength="255" />
+          <Property Name="Item_Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Req_Qty" Type="nvarchar" MaxLength="255" />
+          <Property Name="Order_Type" Type="nvarchar" MaxLength="255" />
+          <Property Name="Business" Type="nvarchar" MaxLength="255" />
+          <Property Name="Dest_Org" Type="nvarchar" MaxLength="255" />
+          <Property Name="WH_Status" Type="nvarchar" MaxLength="255" />
+          <Property Name="Backlog_Instr" Type="nvarchar" MaxLength="255" />
+          <Property Name="Ord_Qty" Type="nvarchar" MaxLength="255" />
+          <Property Name="Delivered_Qty" Type="nvarchar" MaxLength="255" />
+          <Property Name="Cancelled_Qty" Type="nvarchar" MaxLength="255" />
+          <Property Name="Schd_Dt" Type="nvarchar" MaxLength="255" />
+          <Property Name="Age" Type="nvarchar" MaxLength="255" />
+          <Property Name="Serv_Req_Num" Type="nvarchar" MaxLength="255" />
+          <Property Name="S_Country" Type="nvarchar" MaxLength="255" />
+          <Property Name="LTB" Type="nvarchar" MaxLength="255" />
+          <Property Name="Order_Type2" Type="nvarchar" MaxLength="255" />
+          <Property Name="SR_Asset_Serial_Number" Type="nvarchar" MaxLength="255" />
+          <Property Name="MODEL" Type="nvarchar" MaxLength="255" />
+          <Property Name="Item_Type" Type="nvarchar" MaxLength="255" />
+          <Property Name="HWPL" Type="nvarchar" MaxLength="255" />
+          <Property Name="CIRF#" Type="nvarchar" MaxLength="2000" />
+          <Property Name="Line_Number" Type="nvarchar" MaxLength="255" />
+          <Property Name="Pack_Instruction" Type="nvarchar" MaxLength="255" />
+          <Property Name="Ship_Instruction" Type="nvarchar" MaxLength="255" />
+          <Property Name="STATUS" Type="nvarchar" MaxLength="255" />
+          <Property Name="ref_part_num" Type="nvarchar" MaxLength="255" />
+          <Property Name="ref_Status" Type="nvarchar" MaxLength="255" />
+          <Property Name="HOLD_TYPE" Type="nvarchar" MaxLength="255" />
+          <Property Name="SO_Number_S" Type="nvarchar" MaxLength="255" />
+          <Property Name="SO_Type_S" Type="nvarchar" MaxLength="255" />
+          <Property Name="SO_Status_S" Type="nvarchar" MaxLength="255" />
+          <Property Name="PSO_Number" Type="nvarchar" MaxLength="255" />
+          <Property Name="PSO_Status" Type="nvarchar" MaxLength="255" />
+          <Property Name="PSO_Team_S" Type="nvarchar" MaxLength="255" />
+          <Property Name="Employee_Name_S" Type="nvarchar" MaxLength="255" />
+          <Property Name="SO_Organization_S" Type="nvarchar" MaxLength="255" />
+          <Property Name="SO_Region_S" Type="nvarchar" MaxLength="255" />
+          <Property Name="SR_Agilent_Model_Number_S" Type="nvarchar" MaxLength="255" />
+          <Property Name="SR_Asset_Serial_Number_S" Type="nvarchar" MaxLength="255" />
+          <Property Name="RM_Comments" Type="nvarchar" MaxLength="255" />
+          <Property Name="Supplier" Type="nvarchar" MaxLength="255" />
+          <Property Name="Delay_Reason" Type="nvarchar" MaxLength="2000" />
+          <Property Name="Logistics_Delay_Reasons" Type="nvarchar" MaxLength="2000" />
+          <Property Name="RM_Comment_date" Type="datetime" />
+          <Property Name="RM_Comment_User" Type="nvarchar" MaxLength="2000" />
+          <Property Name="RM_Coordinator_Email" Type="nvarchar" MaxLength="2000" />
+          <Property Name="RM_Coordinator_Name" Type="nvarchar" MaxLength="2000" />
+          <Property Name="EOS_DATE" Type="nvarchar" MaxLength="255" />
+          <Property Name="Reserved_Qty" Type="nvarchar" MaxLength="255" />
+          <Property Name="K02_OH" Type="nvarchar" MaxLength="255" />
+          <Property Name="K03_OH" Type="nvarchar" MaxLength="255" />
+          <Property Name="K04_OH" Type="nvarchar" MaxLength="255" />
+          <Property Name="K02_InTransit_Qty" Type="nvarchar" MaxLength="255" />
+          <Property Name="K03_InTransit_Qty" Type="nvarchar" MaxLength="255" />
+          <Property Name="K04_InTransit_Qty" Type="nvarchar" MaxLength="255" />
+          <Property Name="Korg_FIXME_Qty" Type="nvarchar" MaxLength="255" />
+          <Property Name="Korg_QACHECK_Qty" Type="nvarchar" MaxLength="255" />
+          <Property Name="ref_EOS" Type="nvarchar" MaxLength="255" />
+          <Property Name="K02_ref_OH" Type="nvarchar" MaxLength="255" />
+          <Property Name="K03_ref_OH" Type="nvarchar" MaxLength="255" />
+          <Property Name="K04_ref_OH" Type="nvarchar" MaxLength="255" />
+          <Property Name="K02_ref_InTransit_Qty" Type="nvarchar" MaxLength="255" />
+          <Property Name="K03_ref_InTransit_Qty" Type="nvarchar" MaxLength="255" />
+          <Property Name="K04_ref_InTransit_Qty" Type="nvarchar" MaxLength="255" />
+          <Property Name="Korg_ref_FIXME_Qty" Type="nvarchar" MaxLength="255" />
+          <Property Name="Korg_ref_QACHECK_Qty" Type="nvarchar" MaxLength="255" />
+          <Property Name="Line_type" Type="nvarchar" MaxLength="255" />
+          <Property Name="DEST_LOC_CD" Type="nvarchar" MaxLength="255" />
+          <Property Name="PRODUCT_HEIRARCHY" Type="nvarchar" MaxLength="255" />
+          <Property Name="Deliver_to" Type="nvarchar" MaxLength="255" />
+          <Property Name="Item_Description" Type="nvarchar" MaxLength="255" />
+          <Property Name="Order_Source_Ref" Type="nvarchar" MaxLength="255" />
+          <Property Name="Org_Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="REQ_Age_WD" Type="nvarchar" MaxLength="255" />
+          <Property Name="Line_Status" Type="nvarchar" MaxLength="255" />
+          <Property Name="Line_Id" Type="nvarchar" MaxLength="255" />
+          <Property Name="Un_List_Pr" Type="nvarchar" MaxLength="255" />
+          <Property Name="Un_Sell_Pr" Type="nvarchar" MaxLength="255" />
+          <Property Name="Ship_to" Type="nvarchar" MaxLength="255" />
+          <Property Name="Sub_Inv" Type="nvarchar" MaxLength="255" />
+          <Property Name="Pick_Qty" Type="nvarchar" MaxLength="255" />
+          <Property Name="S_City" Type="nvarchar" MaxLength="255" />
+          <Property Name="S_Loc_Id" Type="nvarchar" MaxLength="255" />
+          <Property Name="S_Post_Code" Type="nvarchar" MaxLength="255" />
+          <Property Name="Load_Date" Type="nvarchar" MaxLength="255" />
+          <Property Name="Site_Number" Type="nvarchar" MaxLength="255" />
+          <Property Name="Address4" Type="nvarchar" MaxLength="255" />
+          <Property Name="Ship_Set" Type="nvarchar" MaxLength="255" />
+          <Property Name="Customer_Name" Type="nvarchar" MaxLength="2000" />
+          <Property Name="Customer_Number" Type="nvarchar" MaxLength="255" />
+          <Property Name="Cust_PO_Num" Type="nvarchar" MaxLength="255" />
+          <Property Name="SPR_Address" Type="nvarchar" MaxLength="255" />
+          <Property Name="booked_dt" Type="nvarchar" MaxLength="255" />
+          <Property Name="K02_Buyer" Type="nvarchar" MaxLength="255" />
+          <Property Name="K02_Supplier" Type="nvarchar" MaxLength="255" />
+          <Property Name="K03_Buyer" Type="nvarchar" MaxLength="255" />
+          <Property Name="K03_Supplier" Type="nvarchar" MaxLength="255" />
+          <Property Name="K04_Buyer" Type="nvarchar" MaxLength="255" />
+          <Property Name="K04_Supplier" Type="nvarchar" MaxLength="255" />
+          <Property Name="DataTimestamp" Type="nvarchar" MaxLength="255" />
+          <Property Name="Age_Group" Type="nvarchar" MaxLength="255" />
+          <Property Name="Destination_Sub" Type="nvarchar" MaxLength="255" />
+          <Property Name="DC_2_DC" Type="nvarchar" MaxLength="255" />
+          <Property Name="Demand_K02" Type="nvarchar" MaxLength="255" />
+          <Property Name="Demand_K03" Type="nvarchar" MaxLength="255" />
+          <Property Name="Demand_K04" Type="nvarchar" MaxLength="255" />
+          <Property Name="PrimaryExcess" Type="nvarchar" MaxLength="255" />
+          <Property Name="Prob_Bklg" Type="nvarchar" MaxLength="255" />
+          <Property Name="Due" Type="nvarchar" MaxLength="255" />
+          <Property Name="demand_freq" Type="nvarchar" MaxLength="255" />
+          <Property Name="K02_PROCESSING_LEAD_TIME" Type="nvarchar" MaxLength="255" />
+          <Property Name="K03_PROCESSING_LEAD_TIME" Type="nvarchar" MaxLength="255" />
+          <Property Name="K04_PROCESSING_LEAD_TIME" Type="nvarchar" MaxLength="255" />
+          <Property Name="Tab_Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="PLANNER" Type="nvarchar" MaxLength="255" />
+          <Property Name="PLANNER_CODE" Type="nvarchar" MaxLength="255" />
+          <Property Name="Ship_Method" Type="nvarchar" MaxLength="255" />
+          <Property Name="Ship_To_Loc" Type="nvarchar" MaxLength="255" />
+          <Property Name="W68_OH" Type="nvarchar" MaxLength="50" />
+          <Property Name="W68_Intransit_Qty" Type="nvarchar" MaxLength="50" />
+          <Property Name="Priority_Code" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'HOTT.dbo.HoTT_POTData_Rawdata' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="HoTT_POTData_Rawdata">
+          <Property Name="Load Date" Type="nvarchar(max)" />
+          <Property Name="Region" Type="nvarchar(max)" />
+          <Property Name="Country" Type="nvarchar(max)" />
+          <Property Name="Source Org" Type="nvarchar(max)" />
+          <Property Name="Ordered Date" Type="nvarchar(max)" />
+          <Property Name="Ship Date" Type="nvarchar(max)" />
+          <Property Name="Order Num" Type="nvarchar(max)" />
+          <Property Name="Ordered Item" Type="nvarchar(max)" />
+          <Property Name="Order Source Reference" Type="nvarchar(max)" />
+          <Property Name="Promise Date" Type="nvarchar(max)" />
+          <Property Name="Pick Status" Type="nvarchar(max)" />
+          <Property Name="Status" Type="nvarchar(max)" />
+          <Property Name="Business Group" Type="nvarchar(max)" />
+          <Property Name="Business Unit" Type="nvarchar(max)" />
+          <Property Name="Product Line" Type="nvarchar(max)" />
+          <Property Name="Freight Carrier Code" Type="nvarchar(max)" />
+          <Property Name="Tracking Number" Type="nvarchar(max)" />
+          <Property Name="Waybill" Type="nvarchar(max)" />
+          <Property Name="Qty" Type="nvarchar(max)" />
+          <Property Name="Qty Shipped" Type="nvarchar(max)" />
+          <Property Name="Packing_Instructions" Type="nvarchar(max)" />
+          <Property Name="Country of Origin" Type="nvarchar(max)" />
+          <Property Name="Warehouse" Type="nvarchar(max)" />
+          <Property Name="Line Type" Type="nvarchar(max)" />
+          <Property Name="Subinventory" Type="nvarchar(max)" />
+          <Property Name="Line" Type="nvarchar(max)" />
+          <Property Name="Operating Unit" Type="nvarchar(max)" />
+          <Property Name="Shipment Priority" Type="nvarchar(max)" />
+          <Property Name="Order Type" Type="nvarchar(max)" />
+          <Property Name="Ship To Location" Type="nvarchar(max)" />
+          <Property Name="Ship To Country" Type="nvarchar(max)" />
+          <Property Name="Region2" Type="nvarchar(max)" />
+          <Property Name="Request Date" Type="nvarchar(max)" />
+          <Property Name="Order Source" Type="nvarchar(max)" />
+          <Property Name="Destination Subinventory" Type="varchar" MaxLength="100" />
+          <Property Name="Sys Date" Type="varchar" MaxLength="100" />
+          <Property Name="WD Aging (Ship not Recieved)" Type="varchar" MaxLength="100" />
+          <Property Name="CD Aging (Ship not Recieved)" Type="varchar" MaxLength="100" />
+          <Property Name="WD (Order to ship) Aging" Type="varchar" MaxLength="100" />
+          <Property Name="WD Aging (Order + Ship date)" Type="varchar" MaxLength="100" />
+          <Property Name="CD (Order to ship) Aging" Type="varchar" MaxLength="100" />
+          <Property Name="Estimated_Delivery_Date" Type="varchar" MaxLength="100" />
+          <Property Name="New_Estimated_Delivery_Date" Type="varchar" MaxLength="100" />
+          <Property Name="CD Aging (Order not Recieved)" Type="varchar" MaxLength="100" />
+          <Property Name="Item_Type" Type="nvarchar(max)" />
+          <Property Name="Logistics_Delay_Reasons" Type="nvarchar(max)" />
+          <Property Name="RM_Comments" Type="nvarchar(max)" />
+          <Property Name="Customers Comments" Type="nvarchar(max)" />
+          <Property Name="F43" Type="nvarchar(max)" />
+          <Property Name="F44" Type="nvarchar(max)" />
+          <Property Name="F45" Type="nvarchar(max)" />
+          <Property Name="F46" Type="nvarchar(max)" />
+          <Property Name="F47" Type="nvarchar(max)" />
+          <Property Name="F48" Type="nvarchar(max)" />
+          <Property Name="F49" Type="nvarchar(max)" />
+          <Property Name="F50" Type="nvarchar(max)" />
+          <Property Name="F51" Type="nvarchar(max)" />
+          <Property Name="Computed_PSO" Type="nvarchar(max)" />
+          <Property Name="Add_Date" Type="varchar" MaxLength="100" />
+          <Property Name="Modify_Date" Type="varchar" MaxLength="100" />
+          <Property Name="User_Name" Type="varchar" MaxLength="100" />
+          <Property Name="FO_Coordinator_Name" Type="varchar" MaxLength="50" />
+          <Property Name="FO_Coordinator_Email" Type="varchar" MaxLength="50" />
+        </EntityType>-->
+        <EntityContainer Name="HOTTModelStoreContainer">
+          <EntitySet Name="HoTT_Hotline_Report_Rawdata" EntityType="Self.HoTT_Hotline_Report_Rawdata" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [HoTT_Hotline_Report_Rawdata].[id] AS [id], 
+    [HoTT_Hotline_Report_Rawdata].[Org] AS [Org], 
+    [HoTT_Hotline_Report_Rawdata].[Ord_Dt] AS [Ord_Dt], 
+    [HoTT_Hotline_Report_Rawdata].[Req_Dt] AS [Req_Dt], 
+    [HoTT_Hotline_Report_Rawdata].[Promise_Date] AS [Promise_Date], 
+    [HoTT_Hotline_Report_Rawdata].[Order_Num] AS [Order_Num], 
+    [HoTT_Hotline_Report_Rawdata].[Serv_Ord_Num] AS [Serv_Ord_Num], 
+    [HoTT_Hotline_Report_Rawdata].[Item_Name] AS [Item_Name], 
+    [HoTT_Hotline_Report_Rawdata].[Req_Qty] AS [Req_Qty], 
+    [HoTT_Hotline_Report_Rawdata].[Order_Type] AS [Order_Type], 
+    [HoTT_Hotline_Report_Rawdata].[Business] AS [Business], 
+    [HoTT_Hotline_Report_Rawdata].[Dest_Org] AS [Dest_Org], 
+    [HoTT_Hotline_Report_Rawdata].[WH_Status] AS [WH_Status], 
+    [HoTT_Hotline_Report_Rawdata].[Backlog_Instr] AS [Backlog_Instr], 
+    [HoTT_Hotline_Report_Rawdata].[Ord_Qty] AS [Ord_Qty], 
+    [HoTT_Hotline_Report_Rawdata].[Delivered_Qty] AS [Delivered_Qty], 
+    [HoTT_Hotline_Report_Rawdata].[Cancelled_Qty] AS [Cancelled_Qty], 
+    [HoTT_Hotline_Report_Rawdata].[Schd_Dt] AS [Schd_Dt], 
+    [HoTT_Hotline_Report_Rawdata].[Age] AS [Age], 
+    [HoTT_Hotline_Report_Rawdata].[Serv_Req_Num] AS [Serv_Req_Num], 
+    [HoTT_Hotline_Report_Rawdata].[S_Country] AS [S_Country], 
+    [HoTT_Hotline_Report_Rawdata].[LTB] AS [LTB], 
+    [HoTT_Hotline_Report_Rawdata].[Order_Type2] AS [Order_Type2], 
+    [HoTT_Hotline_Report_Rawdata].[SR_Asset_Serial_Number] AS [SR_Asset_Serial_Number], 
+    [HoTT_Hotline_Report_Rawdata].[MODEL] AS [MODEL], 
+    [HoTT_Hotline_Report_Rawdata].[Item_Type] AS [Item_Type], 
+    [HoTT_Hotline_Report_Rawdata].[HWPL] AS [HWPL], 
+    [HoTT_Hotline_Report_Rawdata].[CIRF#] AS [CIRF#], 
+    [HoTT_Hotline_Report_Rawdata].[Line_Number] AS [Line_Number], 
+    [HoTT_Hotline_Report_Rawdata].[Pack_Instruction] AS [Pack_Instruction], 
+    [HoTT_Hotline_Report_Rawdata].[Ship_Instruction] AS [Ship_Instruction], 
+    [HoTT_Hotline_Report_Rawdata].[STATUS] AS [STATUS], 
+    [HoTT_Hotline_Report_Rawdata].[ref_part_num] AS [ref_part_num], 
+    [HoTT_Hotline_Report_Rawdata].[ref_Status] AS [ref_Status], 
+    [HoTT_Hotline_Report_Rawdata].[HOLD_TYPE] AS [HOLD_TYPE], 
+    [HoTT_Hotline_Report_Rawdata].[SO_Number_S] AS [SO_Number_S], 
+    [HoTT_Hotline_Report_Rawdata].[SO_Type_S] AS [SO_Type_S], 
+    [HoTT_Hotline_Report_Rawdata].[SO_Status_S] AS [SO_Status_S], 
+    [HoTT_Hotline_Report_Rawdata].[PSO_Number] AS [PSO_Number], 
+    [HoTT_Hotline_Report_Rawdata].[PSO_Status] AS [PSO_Status], 
+    [HoTT_Hotline_Report_Rawdata].[PSO_Team_S] AS [PSO_Team_S], 
+    [HoTT_Hotline_Report_Rawdata].[Employee_Name_S] AS [Employee_Name_S], 
+    [HoTT_Hotline_Report_Rawdata].[SO_Organization_S] AS [SO_Organization_S], 
+    [HoTT_Hotline_Report_Rawdata].[SO_Region_S] AS [SO_Region_S], 
+    [HoTT_Hotline_Report_Rawdata].[SR_Agilent_Model_Number_S] AS [SR_Agilent_Model_Number_S], 
+    [HoTT_Hotline_Report_Rawdata].[SR_Asset_Serial_Number_S] AS [SR_Asset_Serial_Number_S], 
+    [HoTT_Hotline_Report_Rawdata].[RM_Comments] AS [RM_Comments], 
+    [HoTT_Hotline_Report_Rawdata].[Supplier] AS [Supplier], 
+    [HoTT_Hotline_Report_Rawdata].[Delay_Reason] AS [Delay_Reason], 
+    [HoTT_Hotline_Report_Rawdata].[Logistics_Delay_Reasons] AS [Logistics_Delay_Reasons], 
+    [HoTT_Hotline_Report_Rawdata].[RM_Comment_date] AS [RM_Comment_date], 
+    [HoTT_Hotline_Report_Rawdata].[RM_Comment_User] AS [RM_Comment_User], 
+    [HoTT_Hotline_Report_Rawdata].[RM_Coordinator_Email] AS [RM_Coordinator_Email], 
+    [HoTT_Hotline_Report_Rawdata].[RM_Coordinator_Name] AS [RM_Coordinator_Name], 
+    [HoTT_Hotline_Report_Rawdata].[EOS_DATE] AS [EOS_DATE], 
+    [HoTT_Hotline_Report_Rawdata].[Reserved_Qty] AS [Reserved_Qty], 
+    [HoTT_Hotline_Report_Rawdata].[K02_OH] AS [K02_OH], 
+    [HoTT_Hotline_Report_Rawdata].[K03_OH] AS [K03_OH], 
+    [HoTT_Hotline_Report_Rawdata].[K04_OH] AS [K04_OH], 
+    [HoTT_Hotline_Report_Rawdata].[K02_InTransit_Qty] AS [K02_InTransit_Qty], 
+    [HoTT_Hotline_Report_Rawdata].[K03_InTransit_Qty] AS [K03_InTransit_Qty], 
+    [HoTT_Hotline_Report_Rawdata].[K04_InTransit_Qty] AS [K04_InTransit_Qty], 
+    [HoTT_Hotline_Report_Rawdata].[Korg_FIXME_Qty] AS [Korg_FIXME_Qty], 
+    [HoTT_Hotline_Report_Rawdata].[Korg_QACHECK_Qty] AS [Korg_QACHECK_Qty], 
+    [HoTT_Hotline_Report_Rawdata].[ref_EOS] AS [ref_EOS], 
+    [HoTT_Hotline_Report_Rawdata].[K02_ref_OH] AS [K02_ref_OH], 
+    [HoTT_Hotline_Report_Rawdata].[K03_ref_OH] AS [K03_ref_OH], 
+    [HoTT_Hotline_Report_Rawdata].[K04_ref_OH] AS [K04_ref_OH], 
+    [HoTT_Hotline_Report_Rawdata].[K02_ref_InTransit_Qty] AS [K02_ref_InTransit_Qty], 
+    [HoTT_Hotline_Report_Rawdata].[K03_ref_InTransit_Qty] AS [K03_ref_InTransit_Qty], 
+    [HoTT_Hotline_Report_Rawdata].[K04_ref_InTransit_Qty] AS [K04_ref_InTransit_Qty], 
+    [HoTT_Hotline_Report_Rawdata].[Korg_ref_FIXME_Qty] AS [Korg_ref_FIXME_Qty], 
+    [HoTT_Hotline_Report_Rawdata].[Korg_ref_QACHECK_Qty] AS [Korg_ref_QACHECK_Qty], 
+    [HoTT_Hotline_Report_Rawdata].[Line_type] AS [Line_type], 
+    [HoTT_Hotline_Report_Rawdata].[DEST_LOC_CD] AS [DEST_LOC_CD], 
+    [HoTT_Hotline_Report_Rawdata].[PRODUCT_HEIRARCHY] AS [PRODUCT_HEIRARCHY], 
+    [HoTT_Hotline_Report_Rawdata].[Deliver_to] AS [Deliver_to], 
+    [HoTT_Hotline_Report_Rawdata].[Item_Description] AS [Item_Description], 
+    [HoTT_Hotline_Report_Rawdata].[Order_Source_Ref] AS [Order_Source_Ref], 
+    [HoTT_Hotline_Report_Rawdata].[Org_Name] AS [Org_Name], 
+    [HoTT_Hotline_Report_Rawdata].[REQ_Age_WD] AS [REQ_Age_WD], 
+    [HoTT_Hotline_Report_Rawdata].[Line_Status] AS [Line_Status], 
+    [HoTT_Hotline_Report_Rawdata].[Line_Id] AS [Line_Id], 
+    [HoTT_Hotline_Report_Rawdata].[Un_List_Pr] AS [Un_List_Pr], 
+    [HoTT_Hotline_Report_Rawdata].[Un_Sell_Pr] AS [Un_Sell_Pr], 
+    [HoTT_Hotline_Report_Rawdata].[Ship_to] AS [Ship_to], 
+    [HoTT_Hotline_Report_Rawdata].[Sub_Inv] AS [Sub_Inv], 
+    [HoTT_Hotline_Report_Rawdata].[Pick_Qty] AS [Pick_Qty], 
+    [HoTT_Hotline_Report_Rawdata].[S_City] AS [S_City], 
+    [HoTT_Hotline_Report_Rawdata].[S_Loc_Id] AS [S_Loc_Id], 
+    [HoTT_Hotline_Report_Rawdata].[S_Post_Code] AS [S_Post_Code], 
+    [HoTT_Hotline_Report_Rawdata].[Load_Date] AS [Load_Date], 
+    [HoTT_Hotline_Report_Rawdata].[Site_Number] AS [Site_Number], 
+    [HoTT_Hotline_Report_Rawdata].[Address4] AS [Address4], 
+    [HoTT_Hotline_Report_Rawdata].[Ship_Set] AS [Ship_Set], 
+    [HoTT_Hotline_Report_Rawdata].[Customer_Name] AS [Customer_Name], 
+    [HoTT_Hotline_Report_Rawdata].[Customer_Number] AS [Customer_Number], 
+    [HoTT_Hotline_Report_Rawdata].[Cust_PO_Num] AS [Cust_PO_Num], 
+    [HoTT_Hotline_Report_Rawdata].[SPR_Address] AS [SPR_Address], 
+    [HoTT_Hotline_Report_Rawdata].[booked_dt] AS [booked_dt], 
+    [HoTT_Hotline_Report_Rawdata].[K02_Buyer] AS [K02_Buyer], 
+    [HoTT_Hotline_Report_Rawdata].[K02_Supplier] AS [K02_Supplier], 
+    [HoTT_Hotline_Report_Rawdata].[K03_Buyer] AS [K03_Buyer], 
+    [HoTT_Hotline_Report_Rawdata].[K03_Supplier] AS [K03_Supplier], 
+    [HoTT_Hotline_Report_Rawdata].[K04_Buyer] AS [K04_Buyer], 
+    [HoTT_Hotline_Report_Rawdata].[K04_Supplier] AS [K04_Supplier], 
+    [HoTT_Hotline_Report_Rawdata].[DataTimestamp] AS [DataTimestamp], 
+    [HoTT_Hotline_Report_Rawdata].[Age_Group] AS [Age_Group], 
+    [HoTT_Hotline_Report_Rawdata].[Destination_Sub] AS [Destination_Sub], 
+    [HoTT_Hotline_Report_Rawdata].[DC_2_DC] AS [DC_2_DC], 
+    [HoTT_Hotline_Report_Rawdata].[Demand_K02] AS [Demand_K02], 
+    [HoTT_Hotline_Report_Rawdata].[Demand_K03] AS [Demand_K03], 
+    [HoTT_Hotline_Report_Rawdata].[Demand_K04] AS [Demand_K04], 
+    [HoTT_Hotline_Report_Rawdata].[PrimaryExcess] AS [PrimaryExcess], 
+    [HoTT_Hotline_Report_Rawdata].[Prob_Bklg] AS [Prob_Bklg], 
+    [HoTT_Hotline_Report_Rawdata].[Due] AS [Due], 
+    [HoTT_Hotline_Report_Rawdata].[demand_freq] AS [demand_freq], 
+    [HoTT_Hotline_Report_Rawdata].[K02_PROCESSING_LEAD_TIME] AS [K02_PROCESSING_LEAD_TIME], 
+    [HoTT_Hotline_Report_Rawdata].[K03_PROCESSING_LEAD_TIME] AS [K03_PROCESSING_LEAD_TIME], 
+    [HoTT_Hotline_Report_Rawdata].[K04_PROCESSING_LEAD_TIME] AS [K04_PROCESSING_LEAD_TIME], 
+    [HoTT_Hotline_Report_Rawdata].[Tab_Name] AS [Tab_Name], 
+    [HoTT_Hotline_Report_Rawdata].[PLANNER] AS [PLANNER], 
+    [HoTT_Hotline_Report_Rawdata].[PLANNER_CODE] AS [PLANNER_CODE], 
+    [HoTT_Hotline_Report_Rawdata].[Ship_Method] AS [Ship_Method], 
+    [HoTT_Hotline_Report_Rawdata].[Ship_To_Loc] AS [Ship_To_Loc], 
+    [HoTT_Hotline_Report_Rawdata].[W68_OH] AS [W68_OH], 
+    [HoTT_Hotline_Report_Rawdata].[W68_Intransit_Qty] AS [W68_Intransit_Qty], 
+    [HoTT_Hotline_Report_Rawdata].[Priority_Code] AS [Priority_Code]
+    FROM [dbo].[HoTT_Hotline_Report_Rawdata] AS [HoTT_Hotline_Report_Rawdata]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HOTTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="HOTTEntities" annotation:LazyLoadingEnabled="true" >
+          <EntitySet Name="HoTT_Hotline_Report_Rawdata" EntityType="HOTTModel.HoTT_Hotline_Report_Rawdata" />
+        </EntityContainer>
+        <EntityType Name="HoTT_Hotline_Report_Rawdata">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Org" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Ord_Dt" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Req_Dt" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Promise_Date" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Order_Num" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Serv_Ord_Num" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Item_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Req_Qty" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Order_Type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Business" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Dest_Org" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="WH_Status" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Backlog_Instr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Ord_Qty" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Delivered_Qty" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Cancelled_Qty" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Schd_Dt" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Age" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Serv_Req_Num" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="S_Country" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="LTB" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Order_Type2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SR_Asset_Serial_Number" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MODEL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Item_Type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="HWPL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CIRF_" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="Line_Number" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Pack_Instruction" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Ship_Instruction" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="STATUS" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ref_part_num" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ref_Status" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="HOLD_TYPE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SO_Number_S" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SO_Type_S" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SO_Status_S" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PSO_Number" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PSO_Status" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PSO_Team_S" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Employee_Name_S" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SO_Organization_S" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SO_Region_S" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SR_Agilent_Model_Number_S" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SR_Asset_Serial_Number_S" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="RM_Comments" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Supplier" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Delay_Reason" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="Logistics_Delay_Reasons" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="RM_Comment_date" Type="DateTime" Precision="3" />
+          <Property Name="RM_Comment_User" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="RM_Coordinator_Email" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="RM_Coordinator_Name" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="EOS_DATE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Reserved_Qty" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="K02_OH" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="K03_OH" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="K04_OH" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="K02_InTransit_Qty" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="K03_InTransit_Qty" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="K04_InTransit_Qty" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Korg_FIXME_Qty" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Korg_QACHECK_Qty" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ref_EOS" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="K02_ref_OH" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="K03_ref_OH" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="K04_ref_OH" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="K02_ref_InTransit_Qty" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="K03_ref_InTransit_Qty" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="K04_ref_InTransit_Qty" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Korg_ref_FIXME_Qty" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Korg_ref_QACHECK_Qty" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Line_type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DEST_LOC_CD" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PRODUCT_HEIRARCHY" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Deliver_to" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Item_Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Order_Source_Ref" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Org_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="REQ_Age_WD" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Line_Status" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Line_Id" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Un_List_Pr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Un_Sell_Pr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Ship_to" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Sub_Inv" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Pick_Qty" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="S_City" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="S_Loc_Id" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="S_Post_Code" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Load_Date" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Site_Number" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Address4" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Ship_Set" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Customer_Name" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="Customer_Number" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Cust_PO_Num" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SPR_Address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="booked_dt" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="K02_Buyer" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="K02_Supplier" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="K03_Buyer" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="K03_Supplier" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="K04_Buyer" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="K04_Supplier" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DataTimestamp" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Age_Group" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Destination_Sub" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DC_2_DC" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Demand_K02" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Demand_K03" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Demand_K04" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PrimaryExcess" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Prob_Bklg" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Due" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="demand_freq" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="K02_PROCESSING_LEAD_TIME" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="K03_PROCESSING_LEAD_TIME" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="K04_PROCESSING_LEAD_TIME" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Tab_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PLANNER" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PLANNER_CODE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Ship_Method" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Ship_To_Loc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="W68_OH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="W68_Intransit_Qty" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Priority_Code" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HOTTModelStoreContainer" CdmEntityContainer="HOTTEntities" >
+        <EntitySetMapping Name="HoTT_Hotline_Report_Rawdata">
+            <EntityTypeMapping TypeName="HOTTModel.HoTT_Hotline_Report_Rawdata">
+              <MappingFragment StoreEntitySet="HoTT_Hotline_Report_Rawdata">
+                <ScalarProperty Name="Priority_Code" ColumnName="Priority_Code" />
+                <ScalarProperty Name="W68_Intransit_Qty" ColumnName="W68_Intransit_Qty" />
+                <ScalarProperty Name="W68_OH" ColumnName="W68_OH" />
+                <ScalarProperty Name="Ship_To_Loc" ColumnName="Ship_To_Loc" />
+                <ScalarProperty Name="Ship_Method" ColumnName="Ship_Method" />
+                <ScalarProperty Name="PLANNER_CODE" ColumnName="PLANNER_CODE" />
+                <ScalarProperty Name="PLANNER" ColumnName="PLANNER" />
+                <ScalarProperty Name="Tab_Name" ColumnName="Tab_Name" />
+                <ScalarProperty Name="K04_PROCESSING_LEAD_TIME" ColumnName="K04_PROCESSING_LEAD_TIME" />
+                <ScalarProperty Name="K03_PROCESSING_LEAD_TIME" ColumnName="K03_PROCESSING_LEAD_TIME" />
+                <ScalarProperty Name="K02_PROCESSING_LEAD_TIME" ColumnName="K02_PROCESSING_LEAD_TIME" />
+                <ScalarProperty Name="demand_freq" ColumnName="demand_freq" />
+                <ScalarProperty Name="Due" ColumnName="Due" />
+                <ScalarProperty Name="Prob_Bklg" ColumnName="Prob_Bklg" />
+                <ScalarProperty Name="PrimaryExcess" ColumnName="PrimaryExcess" />
+                <ScalarProperty Name="Demand_K04" ColumnName="Demand_K04" />
+                <ScalarProperty Name="Demand_K03" ColumnName="Demand_K03" />
+                <ScalarProperty Name="Demand_K02" ColumnName="Demand_K02" />
+                <ScalarProperty Name="DC_2_DC" ColumnName="DC_2_DC" />
+                <ScalarProperty Name="Destination_Sub" ColumnName="Destination_Sub" />
+                <ScalarProperty Name="Age_Group" ColumnName="Age_Group" />
+                <ScalarProperty Name="DataTimestamp" ColumnName="DataTimestamp" />
+                <ScalarProperty Name="K04_Supplier" ColumnName="K04_Supplier" />
+                <ScalarProperty Name="K04_Buyer" ColumnName="K04_Buyer" />
+                <ScalarProperty Name="K03_Supplier" ColumnName="K03_Supplier" />
+                <ScalarProperty Name="K03_Buyer" ColumnName="K03_Buyer" />
+                <ScalarProperty Name="K02_Supplier" ColumnName="K02_Supplier" />
+                <ScalarProperty Name="K02_Buyer" ColumnName="K02_Buyer" />
+                <ScalarProperty Name="booked_dt" ColumnName="booked_dt" />
+                <ScalarProperty Name="SPR_Address" ColumnName="SPR_Address" />
+                <ScalarProperty Name="Cust_PO_Num" ColumnName="Cust_PO_Num" />
+                <ScalarProperty Name="Customer_Number" ColumnName="Customer_Number" />
+                <ScalarProperty Name="Customer_Name" ColumnName="Customer_Name" />
+                <ScalarProperty Name="Ship_Set" ColumnName="Ship_Set" />
+                <ScalarProperty Name="Address4" ColumnName="Address4" />
+                <ScalarProperty Name="Site_Number" ColumnName="Site_Number" />
+                <ScalarProperty Name="Load_Date" ColumnName="Load_Date" />
+                <ScalarProperty Name="S_Post_Code" ColumnName="S_Post_Code" />
+                <ScalarProperty Name="S_Loc_Id" ColumnName="S_Loc_Id" />
+                <ScalarProperty Name="S_City" ColumnName="S_City" />
+                <ScalarProperty Name="Pick_Qty" ColumnName="Pick_Qty" />
+                <ScalarProperty Name="Sub_Inv" ColumnName="Sub_Inv" />
+                <ScalarProperty Name="Ship_to" ColumnName="Ship_to" />
+                <ScalarProperty Name="Un_Sell_Pr" ColumnName="Un_Sell_Pr" />
+                <ScalarProperty Name="Un_List_Pr" ColumnName="Un_List_Pr" />
+                <ScalarProperty Name="Line_Id" ColumnName="Line_Id" />
+                <ScalarProperty Name="Line_Status" ColumnName="Line_Status" />
+                <ScalarProperty Name="REQ_Age_WD" ColumnName="REQ_Age_WD" />
+                <ScalarProperty Name="Org_Name" ColumnName="Org_Name" />
+                <ScalarProperty Name="Order_Source_Ref" ColumnName="Order_Source_Ref" />
+                <ScalarProperty Name="Item_Description" ColumnName="Item_Description" />
+                <ScalarProperty Name="Deliver_to" ColumnName="Deliver_to" />
+                <ScalarProperty Name="PRODUCT_HEIRARCHY" ColumnName="PRODUCT_HEIRARCHY" />
+                <ScalarProperty Name="DEST_LOC_CD" ColumnName="DEST_LOC_CD" />
+                <ScalarProperty Name="Line_type" ColumnName="Line_type" />
+                <ScalarProperty Name="Korg_ref_QACHECK_Qty" ColumnName="Korg_ref_QACHECK_Qty" />
+                <ScalarProperty Name="Korg_ref_FIXME_Qty" ColumnName="Korg_ref_FIXME_Qty" />
+                <ScalarProperty Name="K04_ref_InTransit_Qty" ColumnName="K04_ref_InTransit_Qty" />
+                <ScalarProperty Name="K03_ref_InTransit_Qty" ColumnName="K03_ref_InTransit_Qty" />
+                <ScalarProperty Name="K02_ref_InTransit_Qty" ColumnName="K02_ref_InTransit_Qty" />
+                <ScalarProperty Name="K04_ref_OH" ColumnName="K04_ref_OH" />
+                <ScalarProperty Name="K03_ref_OH" ColumnName="K03_ref_OH" />
+                <ScalarProperty Name="K02_ref_OH" ColumnName="K02_ref_OH" />
+                <ScalarProperty Name="ref_EOS" ColumnName="ref_EOS" />
+                <ScalarProperty Name="Korg_QACHECK_Qty" ColumnName="Korg_QACHECK_Qty" />
+                <ScalarProperty Name="Korg_FIXME_Qty" ColumnName="Korg_FIXME_Qty" />
+                <ScalarProperty Name="K04_InTransit_Qty" ColumnName="K04_InTransit_Qty" />
+                <ScalarProperty Name="K03_InTransit_Qty" ColumnName="K03_InTransit_Qty" />
+                <ScalarProperty Name="K02_InTransit_Qty" ColumnName="K02_InTransit_Qty" />
+                <ScalarProperty Name="K04_OH" ColumnName="K04_OH" />
+                <ScalarProperty Name="K03_OH" ColumnName="K03_OH" />
+                <ScalarProperty Name="K02_OH" ColumnName="K02_OH" />
+                <ScalarProperty Name="Reserved_Qty" ColumnName="Reserved_Qty" />
+                <ScalarProperty Name="EOS_DATE" ColumnName="EOS_DATE" />
+                <ScalarProperty Name="RM_Coordinator_Name" ColumnName="RM_Coordinator_Name" />
+                <ScalarProperty Name="RM_Coordinator_Email" ColumnName="RM_Coordinator_Email" />
+                <ScalarProperty Name="RM_Comment_User" ColumnName="RM_Comment_User" />
+                <ScalarProperty Name="RM_Comment_date" ColumnName="RM_Comment_date" />
+                <ScalarProperty Name="Logistics_Delay_Reasons" ColumnName="Logistics_Delay_Reasons" />
+                <ScalarProperty Name="Delay_Reason" ColumnName="Delay_Reason" />
+                <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+                <ScalarProperty Name="RM_Comments" ColumnName="RM_Comments" />
+                <ScalarProperty Name="SR_Asset_Serial_Number_S" ColumnName="SR_Asset_Serial_Number_S" />
+                <ScalarProperty Name="SR_Agilent_Model_Number_S" ColumnName="SR_Agilent_Model_Number_S" />
+                <ScalarProperty Name="SO_Region_S" ColumnName="SO_Region_S" />
+                <ScalarProperty Name="SO_Organization_S" ColumnName="SO_Organization_S" />
+                <ScalarProperty Name="Employee_Name_S" ColumnName="Employee_Name_S" />
+                <ScalarProperty Name="PSO_Team_S" ColumnName="PSO_Team_S" />
+                <ScalarProperty Name="PSO_Status" ColumnName="PSO_Status" />
+                <ScalarProperty Name="PSO_Number" ColumnName="PSO_Number" />
+                <ScalarProperty Name="SO_Status_S" ColumnName="SO_Status_S" />
+                <ScalarProperty Name="SO_Type_S" ColumnName="SO_Type_S" />
+                <ScalarProperty Name="SO_Number_S" ColumnName="SO_Number_S" />
+                <ScalarProperty Name="HOLD_TYPE" ColumnName="HOLD_TYPE" />
+                <ScalarProperty Name="ref_Status" ColumnName="ref_Status" />
+                <ScalarProperty Name="ref_part_num" ColumnName="ref_part_num" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="Ship_Instruction" ColumnName="Ship_Instruction" />
+                <ScalarProperty Name="Pack_Instruction" ColumnName="Pack_Instruction" />
+                <ScalarProperty Name="Line_Number" ColumnName="Line_Number" />
+                <ScalarProperty Name="CIRF_" ColumnName="CIRF#" />
+                <ScalarProperty Name="HWPL" ColumnName="HWPL" />
+                <ScalarProperty Name="Item_Type" ColumnName="Item_Type" />
+                <ScalarProperty Name="MODEL" ColumnName="MODEL" />
+                <ScalarProperty Name="SR_Asset_Serial_Number" ColumnName="SR_Asset_Serial_Number" />
+                <ScalarProperty Name="Order_Type2" ColumnName="Order_Type2" />
+                <ScalarProperty Name="LTB" ColumnName="LTB" />
+                <ScalarProperty Name="S_Country" ColumnName="S_Country" />
+                <ScalarProperty Name="Serv_Req_Num" ColumnName="Serv_Req_Num" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Schd_Dt" ColumnName="Schd_Dt" />
+                <ScalarProperty Name="Cancelled_Qty" ColumnName="Cancelled_Qty" />
+                <ScalarProperty Name="Delivered_Qty" ColumnName="Delivered_Qty" />
+                <ScalarProperty Name="Ord_Qty" ColumnName="Ord_Qty" />
+                <ScalarProperty Name="Backlog_Instr" ColumnName="Backlog_Instr" />
+                <ScalarProperty Name="WH_Status" ColumnName="WH_Status" />
+                <ScalarProperty Name="Dest_Org" ColumnName="Dest_Org" />
+                <ScalarProperty Name="Business" ColumnName="Business" />
+                <ScalarProperty Name="Order_Type" ColumnName="Order_Type" />
+                <ScalarProperty Name="Req_Qty" ColumnName="Req_Qty" />
+                <ScalarProperty Name="Item_Name" ColumnName="Item_Name" />
+                <ScalarProperty Name="Serv_Ord_Num" ColumnName="Serv_Ord_Num" />
+                <ScalarProperty Name="Order_Num" ColumnName="Order_Num" />
+                <ScalarProperty Name="Promise_Date" ColumnName="Promise_Date" />
+                <ScalarProperty Name="Req_Dt" ColumnName="Req_Dt" />
+                <ScalarProperty Name="Ord_Dt" ColumnName="Ord_Dt" />
+                <ScalarProperty Name="Org" ColumnName="Org" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

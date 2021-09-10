@@ -1,0 +1,279 @@
+﻿@using HOTT2._0.Models
+
+@*@model IEnumerable<HOTT2._0.Models.HoTT_Hotline_Report_Rawdata>*@
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml ";
+    ViewBag.Title = "Index";
+}
+<style>
+    .colresize {
+        width: 200px;
+        word-break: break-word;
+        overflow: scroll;
+        height: 75px;
+    }
+
+    .width50 {
+        width: 100px;
+    }
+
+    .filter {
+        height: 150px;
+        margin: 10px;
+        background-color: #80808061;
+        padding: 5px;
+        border: 1px solid red;
+        border-radius: 5px;
+    }
+</style>
+
+<script>
+    $(document).ready(function () {
+        $('#Tablegrid').DataTable({
+            "columnDefs": [
+                { "width": "1%", targets: 3 }
+            ]
+        });
+
+
+  
+
+    });
+</script>
+<div class="col-lg-12 row">
+    <div class="col-lg-1">
+        <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#collapseFilter1" aria-expanded="true" aria-controls="collapseExample">
+            <span class="glyphicon glyphicon-filter">&nbsp;Filters&nbsp;</span>
+        </button>
+    </div>
+    <div class="col-lg-11 col-md-offset-0">
+        <div class=" collapse panel-primary box container filter  " id="collapseFilter1">
+            <form action="/HoTT_Hotline_Report_Rawdata/Index" method="post">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-lg-1">
+                            <label class="control-label col-lg-2" for="Project">Tab_Name</label>
+                        </div>
+                        <div class="col-lg-2">
+                            <select id="ddlTab_Name" name="Tab_Name"
+                                    class="form-control width90Per">
+                                <option value="">Select</option>
+                                <option>Adam</option>
+                                <option>Adeline</option>
+                                <option>Alifah</option>
+                                <option>Choon_Seea</option>
+                                <option>ELVA</option>
+                                <option>Irene</option>
+                                <option>Mona</option>
+                                <option>SZE_MEI</option>
+                                <option>Yee_Khum</option>
+
+                            </select>
+                        </div>
+                        <div class="col-lg-1">
+                            <label class="control-label col-lg-2" for="Project">Org</label>
+                        </div>
+                        <div class="col-lg-2">
+                            <select id="ddlOrg" name="Org"
+                                    class="form-control width90Per">
+                                <option value="">Select</option>
+                                <option>F03</option>
+                                <option>K02</option>
+                                <option>K03</option>
+                                <option>K04</option>
+                                <option>W33</option>
+
+                            </select>
+                        </div>
+
+                        <div class="col-md-1 ">
+                            <label class="control-label col-md-2" for="K02Supplier">
+                                K02 Supplier
+                            </label>
+                        </div>
+                        <div class="col-md-2">
+                            <select id="ddlK02Supplier" name="K02Supplier" class="form-control"
+                                    parameter="AssignedToFilter" class="form-control width90Per">
+                                <option value="">Select</option>
+                                <option>8213-COKEVA INC-01ROSEVILL</option>
+                                <option>8213-CONNOR SUPPORT LLC-8213-01FORTCOLL</option>
+                                <option>8213-DEFAULT COSTING-8213DEFAULT</option>
+                                <option>8213-EVOTEST INC-01SANJOSE</option>
+                                <option>8213-FIERO FLUID POWER INC-01ARVADA100</option>
+                                <option>8213-NI MICROWAVE COMPONENTS-01SANTACLA</option>
+                                <option>8213-ROSENBERGER NO-02AKRON</option>
+                                <option>8213-RVIINC-01REDWOODF</option>
+                                <option>8213-TDK LAMBDA AM-03NEPTUN</option>
+                                <option>8213-VENTURE ELECT-01PENANG</option>
+                                <option>8213-VENTURE ELECTR-01PENANG</option>
+                                <option>From_A03</option>
+                                <option>FROM_A03_CASS</option>
+                                <option>FROM_A03_CLRC</option>
+                                <option>FROM_A03_CLRC_CASS</option>
+                                <option>FROM_A03_CLRC_ESP</option>
+                                <option>FROM_F01_TO_K02</option>
+                                <option>FROM_F03_TO_K02</option>
+                                <option>FROM_F14_TO_K02</option>
+                                <option>FROM_F50_TO_K02</option>
+                                <option>FROM_F51_TO_K02</option>
+                                <option>FROM_F52_TO_K02</option>
+                                <option>FROM_K03</option>
+                                <option>FROM_K03_TO_K02</option>
+                                <option>FROM_K04</option>
+
+                            </select>
+                        </div>
+
+
+
+                        <div class="col-md-1 ">
+                            <label class="control-label col-md-2" for="K03_Supplier">
+                                K03 Supplier
+                            </label>
+                        </div>
+                        <div class="col-md-2">
+                            <select ctrltype="DDL" id="ddlK03Supplier" dtype="bind"
+                                    name="K03Supplier" class="form-control"
+                                    parameter="AssignedToFilter" class="form-control width90Per">
+                                <option value="">Select</option>
+                                <option>5413-ADLINKTECHINC-01CHUNGH</option>
+                                <option>5413-CELESTICA ELEC(M)-01JOHORBAH</option>
+                                <option>5413-CONTRAVES ADVA-01MELAKA</option>
+                                <option>5413-DEFAULT COSTING-5413DEFAULT</option>
+                                <option>5413-D'NONCE(M)SDN-01PRAI</option>
+                                <option>5413-FU HAO MANUF-01PERAI</option>
+                                <option>5413-HANA MICROELEC01LAMPHU</option>
+                                <option>5413-JABIL CIRCUIT-01PENANG</option>
+                                <option>5413-JET TECHNOLOGY CO LTD-01SANCHUNG</option>
+                                <option>5413-Mace Instrumentation Sdn Bhd-01 Pen</option>
+                                <option>5413-MYREKA INDUSTR01BAYANB</option>
+                                <option>5413-NUTEK PTE LTD-01SINGAPOR</option>
+                                <option>5413-PINTARMAS SDN-01JOHORBAH</option>
+                                <option>5413-R-LOGIC INTERNATIONAL PTE LTD-03SIN</option>
+                                <option>5413-TRILOGY TECHNOLOGIES PTE LTD-01SING</option>
+                                <option>5413-VENTURE ELEC SRVS-01PENANG</option>
+                                <option>5413-WINCHESTER ELE-01PRAIPENA</option>
+                                <option>FROM_F01_TO_K03</option>
+                                <option>FROM_F03_TO_K03</option>
+                                <option>FROM_F50_TO_K03</option>
+                                <option>FROM_F51_TO_K03</option>
+                                <option>FROM_F52_TO_K03</option>
+                                <option>FROM_F55_TO_K03</option>
+                                <option>FROM_K02</option>
+                                <option>FROM_K04</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1 ">
+                            <label class="control-label col-md-2" for="K04_Supplier">
+                                K04 Supplier
+                            </label>
+                        </div>
+                        <div class="col-md-2">
+                            <select id="ddlK04Supplier" name="K04_Supplier"
+                                    class="form-control width90Per">
+                                <option value="">Select</option>
+                                <option>0653-DEFAULT COSTING-0653DEFAULT</option>
+                                <option>0653-EA ELEKTRO AUT01VIERSE</option>
+                                <option>FROM_F01_TO_K04</option>
+                                <option>FROM_F03_TO_K04</option>
+                                <option>FROM_F50_TO_K04</option>
+                                <option>FROM_F51_TO_K04</option>
+                                <option>FROM_F52_TO_K04</option>
+                                <option>FROM_K02</option>
+                                <option>FROM_K03</option>
+                                <option>FROM_K03_TO_K04</option>
+
+
+                            </select>
+                        </div>
+
+                        <div class="col-md-1 ">
+                            <label class="control-label col-md-2" for="K02_Buyer">
+                                K02 Buyer
+
+                            </label>
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-control" name="K02_Buyer">
+                                <option value="">Select Buyers</option>
+                                <option>AHMAD SIDEK, NUR ALIFAH BINTI</option>
+                                <option>CHONG, KOK SENG</option>
+                                <option>CHONG, YEE KHUM</option>
+                                <option>CHOONG, HOOI CHIN IRENE</option>
+                                <option>LOO, CHIN WAH</option>
+                                <option>SHAHBAN, MONA FELISA BINTI</option>
+                                <option>TAN, CHOON SEEA</option>
+                                <option>TAN, KAH HOOI</option>
+                                <option>TAN, SZE MEI SHIRLYN</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-1 ">
+                            <label class="control-label col-md-2" for="K03_Buyer">
+                                K03 Buyer
+                            </label>
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-control" id="Buyerslist" name="K03_Buyer">
+                                <option value="">Select Buyers</option>
+                                <option>AHMAD SIDEK, NUR ALIFAH BINTI</option>
+                                <option>CHONG, KOK SENG</option>
+                                <option>CHONG, YEE KHUM</option>
+                                <option>CHOONG, HOOI CHIN IRENE</option>
+                                <option>LOO, CHIN WAH</option>
+                                <option>SHAHBAN, MONA FELISA BINTI</option>
+                                <option>TAN, CHOON SEEA</option>
+                                <option>TAN, KAH HOOI</option>
+                                <option>TAN, SZE MEI SHIRLYN</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-1 ">
+                            <label class="control-label col-md-2" for="K04_Buyer">
+                                K04 Buyer
+                            </label>
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-control" id="Buyerslist" name="K04_Buyer">
+                                <option value="">Select Buyers</option>
+                                <option>AHMAD SIDEK, NUR ALIFAH BINTI</option>
+                                <option>CHONG, KOK SENG</option>
+                                <option>CHONG, YEE KHUM</option>
+                                <option>CHOONG, HOOI CHIN IRENE</option>
+                                <option>LOO, CHIN WAH</option>
+                                <option>SHAHBAN, MONA FELISA BINTI</option>
+                                <option>TAN, CHOON SEEA</option>
+                                <option>TAN, KAH HOOI</option>
+                                <option>TAN, SZE MEI SHIRLYN</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row col-md-4 pull-right">
+                        <div class="col-md-6" style="margin-top: 10px;">
+                            <input type="button" value="Clear" data-dismiss="modal" onclick="clearfilter()" class="btn btn-default btn btn-warning " />
+                        </div>
+
+                        <div class="col-md-6" style="margin-top: 10px;">
+                            <input type="submit" value="Search" data-dismiss="modal" onclick="filtergrid()" class="btn btn-default btn btn-primary " />
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div style="width: 100%; overflow: scroll; height: 550px;">
+    <div id="partial" class="partial_inner_box_left">
+        @{ Html.RenderPartial("Dashboard"); }
+    </div>
+    @*<div id="htmldiv">
+
+        </div>*@
+</div>
+

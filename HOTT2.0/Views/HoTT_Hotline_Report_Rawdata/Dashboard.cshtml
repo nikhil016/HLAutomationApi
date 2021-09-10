@@ -1,0 +1,165 @@
+﻿@model IEnumerable<HOTT2._0.Models.HoTT_Hotline_Report_Rawdata>
+
+
+<div>
+<table class="table table-bordered " id="Tablegrid">
+    <thead>
+        <tr>
+            <th>  @Html.DisplayNameFor(model => model.Backlog_Instr)</th>
+            <th>  @Html.DisplayNameFor(model => model.Org)</th>
+            <th>  @Html.DisplayNameFor(model => model.Priority_Code)</th>
+            <th>  @Html.DisplayNameFor(model => model.Ord_Dt)</th>
+            <th>  @Html.DisplayNameFor(model => model.Promise_Date)</th>
+            <th>  @Html.DisplayNameFor(model => model.Order_Num)</th>
+            <th>  @Html.DisplayNameFor(model => model.Serv_Ord_Num)</th>
+            <th><div class="width50 ">  @Html.DisplayNameFor(model => model.Pack_Instruction)</div> </th>
+            <th>  @Html.DisplayNameFor(model => model.Ship_Instruction)</th>
+            <th>  @Html.DisplayNameFor(model => model.STATUS)</th>
+            <th>  @Html.DisplayNameFor(model => model.EOS_DATE)</th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.ESL_Date)*@
+                @Html.DisplayName("ESL_Date")
+                </th>
+                <th>  @Html.DisplayName("EESP_Date")</th>
+                <th>  @Html.DisplayNameFor(model => model.PLANNER)</th>
+                <th>  @Html.DisplayNameFor(model => model.demand_freq)</th>
+                <th>  @Html.DisplayNameFor(model => model.WH_Status)</th>
+                <th>  @Html.DisplayNameFor(model => model.Item_Name)</th>
+                <th>  @Html.DisplayNameFor(model => model.Req_Qty)</th>
+                <th>  @Html.DisplayNameFor(model => model.Reserved_Qty)</th>
+                <th>
+                    <div class="width50"> @Html.DisplayName("Inventory")</div>
+
+                </th>
+                <th>  @Html.DisplayNameFor(model => model.ref_part_num)</th>
+                <th>  @Html.DisplayNameFor(model => model.ref_Status)</th>
+
+                <th>
+                    <div class="width50">
+                        @Html.DisplayName("ref_Part Information")
+                    </div>
+
+                </th>
+                <th>
+                    <div class="width50">   @Html.DisplayName("Cust_info")</div>
+
+                </th>
+                <th>  @Html.DisplayNameFor(model => model.Dest_Org)</th>
+                <th>  @Html.DisplayNameFor(model => model.DEST_LOC_CD)</th>
+
+                <th>
+                    cutomer_info
+                </th>
+                <th>  @Html.DisplayNameFor(model => model.Age)</th>
+                <th>  @Html.DisplayNameFor(model => model.Age_Group)</th>
+                <th>  @Html.DisplayNameFor(model => model.K02_Buyer)</th>
+                <th>  @Html.DisplayNameFor(model => model.K03_Buyer)</th>
+                <th>  @Html.DisplayNameFor(model => model.K04_Buyer)</th>
+                <th>  @Html.DisplayNameFor(model => model.K02_Supplier)</th>
+                <th>  @Html.DisplayNameFor(model => model.K03_Supplier)</th>
+                <th>  @Html.DisplayNameFor(model => model.K04_Supplier)</th>
+                <th>  @Html.DisplayNameFor(model => model.Tab_Name)</th>
+                <th>  @Html.DisplayNameFor(model => model.Item_Type)</th>
+                <th>  @Html.DisplayNameFor(model => model.Line_type)</th>
+                <th>  @Html.DisplayNameFor(model => model.Line_Number)</th>
+                <th>  @Html.DisplayNameFor(model => model.HWPL)</th>
+                <th>  @Html.DisplayNameFor(model => model.Business)</th>
+
+                </tr>
+                <thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+
+                                <td> @Html.DisplayFor(modelItem => item.Backlog_Instr)</td>
+                                <td> @Html.DisplayFor(modelItem => item.Org)</td>
+                                <td> @Html.DisplayFor(modelItem => item.Priority_Code)</td>
+                                <td> @Html.DisplayFor(modelItem => item.Ord_Dt)</td>
+                                <td> @Html.DisplayFor(modelItem => item.Promise_Date)</td>
+                                <td> @Html.DisplayFor(modelItem => item.Order_Num)</td>
+                                <td> @Html.DisplayFor(modelItem => item.Serv_Ord_Num)</td>
+                                <td><div class="colresize"> @Html.DisplayFor(modelItem => item.Pack_Instruction)</div></td>
+                                <td> @Html.DisplayFor(modelItem => item.Ship_Instruction)</td>
+                                <td> @Html.DisplayFor(modelItem => item.STATUS)</td>
+                                <td> @Html.DisplayFor(modelItem => item.EOS_DATE)</td>
+                                @*<td> @Html.DisplayFor(modelItem => item.ESL_Date)</td>*@
+                                <td>ESL_Date</td>
+                                <td>
+                                    @*@Html.DisplayFor(modelItem => item.EESP_Date)*@
+                                    EESP_Date
+                                </td>
+                                <td> @Html.DisplayFor(modelItem => item.PLANNER)</td>
+                                <td> @Html.DisplayFor(modelItem => item.demand_freq)</td>
+                                <td> @Html.DisplayFor(modelItem => item.WH_Status)</td>
+                                <td> @Html.DisplayFor(modelItem => item.Item_Name)</td>
+                                <td> @Html.DisplayFor(modelItem => item.Req_Qty)</td>
+                                <td> @Html.DisplayFor(modelItem => item.Reserved_Qty)</td>
+                                <td>
+                                    <div class="ref_Inventory colresize">
+                                        @Html.DisplayNameFor(model => model.K02_ref_OH)|
+                                        @Html.DisplayNameFor(model => model.K03_ref_OH)|
+                                        @Html.DisplayNameFor(model => model.K04_ref_OH)|
+                                        @Html.DisplayNameFor(model => model.K02_ref_InTransit_Qty)|
+                                        @Html.DisplayNameFor(model => model.K03_ref_InTransit_Qty)|
+                                        @Html.DisplayNameFor(model => model.K04_ref_InTransit_Qty)|
+                                        @Html.DisplayNameFor(model => model.Korg_ref_FIXME_Qty)|
+                                        @Html.DisplayNameFor(model => model.Korg_ref_QACHECK_Qty)
+                                    </div>
+                                </td>
+                                <td> @Html.DisplayFor(modelItem => item.ref_part_num)</td>
+                                <td> @Html.DisplayFor(modelItem => item.ref_Status)</td>
+                                <td>
+                                    <div class="ref_part_number colresize">
+                                        @Html.DisplayFor(modelItem => item.ref_EOS)|
+                                        @Html.DisplayName("Ref_ESL_Date")|
+                                        @Html.DisplayName("EESP_Date") |
+                                        @Html.DisplayName("EESP_Date")  |
+                                        @*@Html.DisplayFor(modelItem => item.Ref_ESL_Date_)|*@
+                                        @*@Html.DisplayFor(modelItem => item.EESP_Date)*@
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="ref_inventroy colresize">
+                                        @Html.DisplayFor(modelItem => item.K02_ref_OH)|
+                                        @Html.DisplayFor(modelItem => item.K03_ref_OH)|
+                                        @Html.DisplayFor(modelItem => item.K04_ref_OH)|
+                                        @Html.DisplayFor(modelItem => item.K02_ref_InTransit_Qty)|
+                                        @Html.DisplayFor(modelItem => item.K03_ref_InTransit_Qty)|
+                                        @Html.DisplayFor(modelItem => item.K04_ref_InTransit_Qty)|
+                                        @Html.DisplayFor(modelItem => item.Korg_ref_FIXME_Qty)|
+                                        @Html.DisplayFor(modelItem => item.Korg_ref_QACHECK_Qty)
+                                    </div>
+                                </td>
+                                <td> @Html.DisplayFor(modelItem => item.Dest_Org)</td>
+                                <td> @Html.DisplayFor(modelItem => item.DEST_LOC_CD)</td>
+                                <td>
+                                    <div class="cust_info colresize">
+                                        @Html.DisplayFor(modelItem => item.Deliver_to)|
+                                        @Html.DisplayFor(modelItem => item.Ship_to)|
+                                        @Html.DisplayFor(modelItem => item.Customer_Name)|
+                                        @Html.DisplayFor(modelItem => item.SR_Asset_Serial_Number)|
+                                        @Html.DisplayFor(modelItem => item.MODEL)
+                                    </div>
+                                </td>
+
+                                <td> @Html.DisplayFor(modelItem => item.Age)</td>
+                                <td> @Html.DisplayFor(modelItem => item.Age_Group)</td>
+                                <td> @Html.DisplayFor(modelItem => item.K02_Buyer)</td>
+                                <td> @Html.DisplayFor(modelItem => item.K03_Buyer)</td>
+                                <td> @Html.DisplayFor(modelItem => item.K04_Buyer)</td>
+                                <td> @Html.DisplayFor(modelItem => item.K02_Supplier)</td>
+                                <td> @Html.DisplayFor(modelItem => item.K03_Supplier)</td>
+                                <td> @Html.DisplayFor(modelItem => item.K04_Supplier)</td>
+                                <td> @Html.DisplayFor(modelItem => item.Tab_Name)</td>
+                                <td> @Html.DisplayFor(modelItem => item.Item_Type)</td>
+                                <td> @Html.DisplayFor(modelItem => item.Line_type)</td>
+                                <td> @Html.DisplayFor(modelItem => item.Line_Number)</td>
+                                <td> @Html.DisplayFor(modelItem => item.HWPL)</td>
+                                <td> @Html.DisplayFor(modelItem => item.Business)</td>
+                            </tr>
+
+                        }
+                    </tbody>
+                    </table>
+                    </div>

@@ -1,0 +1,1034 @@
+﻿@model HOTT2._0.Models.HoTT_Hotline_Report_Rawdata
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>HoTT_Hotline_Report_Rawdata</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Org)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Org)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ord_Dt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ord_Dt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Req_Dt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Req_Dt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Promise_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Promise_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Order_Num)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Order_Num)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Serv_Ord_Num)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Serv_Ord_Num)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Item_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Item_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Req_Qty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Req_Qty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Order_Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Order_Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Business)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Business)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dest_Org)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dest_Org)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WH_Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WH_Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Backlog_Instr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Backlog_Instr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ord_Qty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ord_Qty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Delivered_Qty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Delivered_Qty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cancelled_Qty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cancelled_Qty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Schd_Dt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Schd_Dt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Serv_Req_Num)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Serv_Req_Num)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S_Country)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S_Country)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LTB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LTB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Order_Type2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Order_Type2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SR_Asset_Serial_Number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SR_Asset_Serial_Number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MODEL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MODEL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Item_Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Item_Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HWPL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HWPL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CIRF_)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CIRF_)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Line_Number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Line_Number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pack_Instruction)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pack_Instruction)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ship_Instruction)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ship_Instruction)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.STATUS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.STATUS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ref_part_num)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ref_part_num)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ref_Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ref_Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HOLD_TYPE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HOLD_TYPE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SO_Number_S)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SO_Number_S)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SO_Type_S)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SO_Type_S)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SO_Status_S)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SO_Status_S)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PSO_Number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PSO_Number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PSO_Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PSO_Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PSO_Team_S)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PSO_Team_S)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee_Name_S)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee_Name_S)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SO_Organization_S)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SO_Organization_S)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SO_Region_S)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SO_Region_S)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SR_Agilent_Model_Number_S)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SR_Agilent_Model_Number_S)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SR_Asset_Serial_Number_S)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SR_Asset_Serial_Number_S)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RM_Comments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RM_Comments)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Supplier)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Supplier)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Delay_Reason)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Delay_Reason)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Logistics_Delay_Reasons)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Logistics_Delay_Reasons)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RM_Comment_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RM_Comment_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RM_Comment_User)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RM_Comment_User)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RM_Coordinator_Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RM_Coordinator_Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RM_Coordinator_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RM_Coordinator_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EOS_DATE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EOS_DATE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Reserved_Qty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Reserved_Qty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.K02_OH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.K02_OH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.K03_OH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.K03_OH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.K04_OH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.K04_OH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.K02_InTransit_Qty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.K02_InTransit_Qty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.K03_InTransit_Qty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.K03_InTransit_Qty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.K04_InTransit_Qty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.K04_InTransit_Qty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Korg_FIXME_Qty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Korg_FIXME_Qty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Korg_QACHECK_Qty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Korg_QACHECK_Qty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ref_EOS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ref_EOS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.K02_ref_OH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.K02_ref_OH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.K03_ref_OH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.K03_ref_OH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.K04_ref_OH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.K04_ref_OH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.K02_ref_InTransit_Qty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.K02_ref_InTransit_Qty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.K03_ref_InTransit_Qty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.K03_ref_InTransit_Qty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.K04_ref_InTransit_Qty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.K04_ref_InTransit_Qty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Korg_ref_FIXME_Qty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Korg_ref_FIXME_Qty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Korg_ref_QACHECK_Qty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Korg_ref_QACHECK_Qty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Line_type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Line_type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DEST_LOC_CD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DEST_LOC_CD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRODUCT_HEIRARCHY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRODUCT_HEIRARCHY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Deliver_to)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Deliver_to)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Item_Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Item_Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Order_Source_Ref)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Order_Source_Ref)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Org_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Org_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.REQ_Age_WD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.REQ_Age_WD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Line_Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Line_Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Line_Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Line_Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Un_List_Pr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Un_List_Pr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Un_Sell_Pr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Un_Sell_Pr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ship_to)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ship_to)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sub_Inv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sub_Inv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pick_Qty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pick_Qty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S_City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S_City)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S_Loc_Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S_Loc_Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S_Post_Code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S_Post_Code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Load_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Load_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Site_Number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Site_Number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ship_Set)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ship_Set)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer_Number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer_Number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cust_PO_Num)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cust_PO_Num)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SPR_Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SPR_Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.booked_dt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.booked_dt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.K02_Buyer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.K02_Buyer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.K02_Supplier)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.K02_Supplier)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.K03_Buyer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.K03_Buyer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.K03_Supplier)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.K03_Supplier)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.K04_Buyer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.K04_Buyer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.K04_Supplier)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.K04_Supplier)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataTimestamp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataTimestamp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Age_Group)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Age_Group)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Destination_Sub)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Destination_Sub)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DC_2_DC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DC_2_DC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Demand_K02)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Demand_K02)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Demand_K03)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Demand_K03)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Demand_K04)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Demand_K04)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrimaryExcess)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrimaryExcess)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prob_Bklg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prob_Bklg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Due)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Due)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.demand_freq)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.demand_freq)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.K02_PROCESSING_LEAD_TIME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.K02_PROCESSING_LEAD_TIME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.K03_PROCESSING_LEAD_TIME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.K03_PROCESSING_LEAD_TIME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.K04_PROCESSING_LEAD_TIME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.K04_PROCESSING_LEAD_TIME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tab_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tab_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PLANNER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PLANNER)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PLANNER_CODE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PLANNER_CODE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ship_Method)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ship_Method)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ship_To_Loc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ship_To_Loc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.W68_OH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.W68_OH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.W68_Intransit_Qty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.W68_Intransit_Qty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Priority_Code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Priority_Code)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
